@@ -1,9 +1,9 @@
 import { useState, useRef } from 'react';
 import { 
-  Star, Heart, Share2, ShoppingCart, ShieldCheck, 
+  Star, Heart, Share2, ShoppingCart, 
   Truck, Clock, ChevronRight, Sparkles, 
-  Package, Info, MessageSquare, ArrowLeft, 
-  Maximize2, Rotate3d, CheckCircle2, Copy
+  Package, ArrowLeft, 
+  Maximize2, Rotate3d, CheckCircle2
 } from 'lucide-react';
 import { Product } from '../data/products';
 import { useCart } from '../hooks/use-cart';
@@ -84,7 +84,7 @@ export function ProductDetail({ product, onBack }: ProductDetailProps) {
                 ))}
                 <button className="relative aspect-square rounded-2xl overflow-hidden border-2 border-slate-100 bg-slate-50 flex flex-col items-center justify-center gap-1 text-muted-foreground hover:bg-slate-100 transition-all">
                   <Rotate3d className="w-6 h-6" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest">360°</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest">360&deg;</span>
                 </button>
               </div>
 
@@ -133,7 +133,7 @@ export function ProductDetail({ product, onBack }: ProductDetailProps) {
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold">Why this matches your needs</h3>
                   <p className="text-white/70 leading-relaxed text-lg italic">
-                    "Based on your recent interest in high-performance creative tools and your preference for premium build quality, the ZenBook Pro X is the ideal match. It offers 35% more processing power than alternatives in this price range, perfectly suited for your 8K video editing workflow."
+                    "Based on your recent interest in high-performance creative tools and your preference for premium build quality, this is the ideal match. It offers exceptional processing power, perfectly suited for modern professional workflows."
                   </p>
                   <Button variant="outline" className="rounded-full border-white/20 text-white hover:bg-white/10 font-bold px-6">
                     Run AI Comparison
@@ -180,7 +180,7 @@ export function ProductDetail({ product, onBack }: ProductDetailProps) {
             <div className="p-8 rounded-[40px] bg-slate-50 border border-border/50 space-y-6">
               <div className="flex items-end gap-4">
                 <span className="text-5xl font-black text-primary">{product.price.toLocaleString()} ETB</span>
-                <span className="text-xl text-muted-foreground line-through mb-1.5">145,000 ETB</span>
+                <span className="text-xl text-muted-foreground line-through mb-1.5">{(product.price * 1.15).toLocaleString()} ETB</span>
                 <Badge className="bg-red-500 text-white mb-1.5">SAVE 15%</Badge>
               </div>
 
@@ -305,7 +305,7 @@ export function ProductDetail({ product, onBack }: ProductDetailProps) {
         <section className="py-24 border-t border-border/50">
           <div className="flex items-center justify-between mb-12">
             <h2 className="text-3xl font-bold text-primary flex items-center gap-3">
-              <MessageSquare className="w-8 h-8 text-accent" />
+              <Sparkles className="w-8 h-8 text-accent" />
               Customer Questions
             </h2>
             <Button variant="outline" className="rounded-full font-bold">Ask a Question</Button>
@@ -315,17 +315,17 @@ export function ProductDetail({ product, onBack }: ProductDetailProps) {
               <div key={i} className="space-y-4">
                 <div className="flex gap-4 items-start">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-[10px] font-bold shrink-0 mt-1">Q</div>
-                  <p className="font-bold text-lg text-primary">{i === 1 ? "Does this laptop support three external 4K monitors?" : "How long does the battery last during heavy video editing?"}</p>
+                  <p className="font-bold text-lg text-primary">{i === 1 ? "Does this support external monitors?" : "How long does the battery last?"}</p>
                 </div>
                 <div className="flex gap-4 items-start">
                   <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-primary text-[10px] font-bold shrink-0 mt-1">A</div>
                   <div className="space-y-2">
                     <p className="text-muted-foreground leading-relaxed">
                       {i === 1 
-                        ? "Yes, it supports up to four external displays via the Thunderbolt 4 and HDMI 2.1 ports. You can run three 4K displays at 120Hz simultaneously." 
-                        : "During heavy Premiere Pro rendering, you can expect about 3.5 to 4 hours. For normal productivity tasks, it lasts up to 10 hours."}
+                        ? "Yes, it supports multiple high-resolution external displays via its modern port array." 
+                        : "Battery life is excellent, typically providing a full day of mixed-use productivity."}
                     </p>
-                    <p className="text-xs text-muted-foreground font-bold">Answered by {product.seller?.name} • 2 days ago</p>
+                    <p className="text-xs text-muted-foreground font-bold">Answered by {product.seller?.name || "Zenbil Official"} • 2 days ago</p>
                   </div>
                 </div>
               </div>

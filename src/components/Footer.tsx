@@ -2,7 +2,7 @@ import { Facebook, Twitter, Instagram, Youtube, Mail, MapPin, Phone } from 'luci
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-white pt-16 pb-8 relative overflow-hidden">
+    <footer className="bg-primary text-white py-20 relative overflow-hidden">
       <div className="absolute inset-0 ethiopian-pattern-dark opacity-10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -88,7 +88,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-white/40 text-sm">
-          <p>© {new Date().getFullYear()} Zenbil Next. All rights reserved. Designed with ❤️ in Addis Ababa.</p>
+          <p>&copy; {new Date().getFullYear()} Zenbil Next. All rights reserved. Designed with ❤️ in Addis Ababa.</p>
         </div>
       </div>
     </footer>

@@ -182,7 +182,7 @@ export function CategoryPage({ onProductClick }: { onProductClick: (p: Product) 
   );
 
   return (
-    <div className="pt-32 pb-24 bg-background ethiopian-pattern min-h-screen">
+    <div className="py-24">
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">

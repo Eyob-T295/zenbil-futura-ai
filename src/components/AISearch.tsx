@@ -13,7 +13,7 @@ export function AISearch() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-slate-50">
+    <section className="py-24 relative overflow-hidden bg-slate-50/50">
       <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white to-transparent"></div>
       
       <div className="container mx-auto px-4 relative z-10">

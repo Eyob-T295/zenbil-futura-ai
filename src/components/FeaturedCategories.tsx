@@ -1,5 +1,4 @@
 import { Monitor, Smartphone, ShoppingBag, Home, Sparkles, BookOpen, UtensilsCrossed, Trophy } from 'lucide-react';
-
 const categories = [
   { name: 'Electronics', icon: <Smartphone className="w-8 h-8" />, count: '1.2k+ items', color: 'bg-blue-50 text-blue-600' },
   { name: 'Fashion', icon: <ShoppingBag className="w-8 h-8" />, count: '3.4k+ items', color: 'bg-emerald-50 text-emerald-600' },

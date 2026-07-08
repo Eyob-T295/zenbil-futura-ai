@@ -23,7 +23,6 @@ export function ProductGrid({ onProductClick }: ProductGridProps) {
   return (
     <div className="space-y-12">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
-
           <div className="flex flex-wrap items-center gap-3">
             {categories.map((category) => (
               <Button

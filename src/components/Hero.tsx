@@ -1,9 +1,9 @@
-import { ArrowRight, Sparkles, Play } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function Hero() {
   return (
-    <div className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-primary">
       {/* Background with Pattern */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -67,6 +67,6 @@ export function Hero() {
            {/* Can add decorative floating product cards here */}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

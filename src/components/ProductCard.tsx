@@ -14,7 +14,7 @@ export function ProductCard({ product, onClick }: ProductCardProps) {
   const wishlisted = isInWishlist(product.id);
 
   return (
-    <div onClick={() => onClick?.(product)} className="group relative bg-white rounded-3xl overflow-hidden border border-border/50 hover:border-primary/20 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 cursor-pointer">
+    <div className="group bg-white rounded-[32px] overflow-hidden border border-border/50 hover:shadow-2xl transition-all duration-500">
       {/* Image Container */}
       <div className="relative aspect-[4/5] overflow-hidden">
         <img
